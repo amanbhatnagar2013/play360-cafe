@@ -1,6 +1,6 @@
 import Link from "next/link";
-import games from "@/data/games.json";
-import GameCard from "@/components/GameCard";
+import games from "../../data/games.json";
+import GameCard from "../../components/GameCard";
 
 export default function Home() {
   const top = games.slice(0, 8);
