@@ -12,6 +12,7 @@ const slides = [
   { src: "/games/slide7.png", title: "Rocket League — 2v2/3v3", tag: "PC" },
   { src: "/games/slide10.png", title: "EA FC 24 — Weekend Tournaments", tag: "PS5" },
 ];
+
 const strip = slides.map(s => ({ src: s.src, title: s.title }));
 
 export default function Home() {
@@ -25,20 +26,33 @@ export default function Home() {
           <Link href="/platforms/playstation" className="btn">Browse Games</Link>
         </div>
       </section>
+
       <section className="space-y-3">
         <h2 className="text-2xl font-semibold">Trending Now</h2>
         <GameMarquee items={strip} />
       </section>
+
       <section>
         <h2 className="text-2xl font-semibold mb-4">Popular Titles</h2>
         <div className="grid md:grid-cols-3 lg:grid-cols-4 gap-4">
           {top.map((g,i) => <GameCard key={i} {...(g as any)} />)}
         </div>
       </section>
+
       <section className="card">
         <h3 className="text-xl font-semibold mb-2">Visit Play 360</h3>
         <p>32-A, Shakti Khand 2, Ground Floor, Indirapuram, Ghaziabad • Open 12:30 PM – 9:15 PM</p>
         <p>Call/WhatsApp: 8588961662</p>
+      </section>
+
+      <section className="card">
+        <h3 className="text-xl font-semibold mb-2">Find Us on Map</h3>
+        <div className="aspect-video w-full rounded-xl overflow-hidden border border-[#222]">
+          <iframe
+            src={"https://www.google.com/maps?q=" + encodeURIComponent("32-A, Shakti Khand 2, Ground Floor, Indirapuram, Ghaziabad") + "&output=embed"}
+            width="100%" height="100%" style={{ border: 0 }} loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade" />
+        </div>
       </section>
     </div>
   );
