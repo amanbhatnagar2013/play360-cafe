@@ -1,5 +1,4 @@
-import pricing from "../../../data/pricing.json";
-
+import pricing from "@/data/pricing.json";
 export default function BookingPage() {
   return (
     <div className="container py-10 space-y-6">

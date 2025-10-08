@@ -12,13 +12,13 @@ export function Footer() {
           <div className="font-semibold mb-2">Quick Links</div>
           <ul className="space-y-1">
             <li><a href="/booking">Seat Booking</a></li>
-            <li><a href="/platforms/playstation">PlayStation Games</a></li>
-            <li><a href="/platforms/xbox">Xbox Games</a></li>
+            <li><a href="/platforms/playstation">PlayStation</a></li>
+            <li><a href="/platforms/xbox">Xbox</a></li>
             <li><a href="/platforms/pc">PC Games</a></li>
           </ul>
         </div>
         <div>
-          <div className="font-semibold mb-2">Follow & Contact</div>
+          <div className="font-semibold mb-2">Contact</div>
           <div>Email: amanbhatnagar2013@gmail.com</div>
           <div>WhatsApp: 8588961662</div>
         </div>

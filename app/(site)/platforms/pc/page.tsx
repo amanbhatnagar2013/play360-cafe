@@ -1,6 +1,5 @@
-import games from "../../../../data/games.json";
-import GameCard from "../../../../components/GameCard";
-
+import games from "@/data/games.json";
+import GameCard from "@/components/GameCard";
 export default function Page() {
   const list = games.filter(g => g.platform.toLowerCase().includes("pc"));
   return (

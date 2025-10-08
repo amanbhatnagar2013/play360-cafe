@@ -1,7 +1,7 @@
 type Props = { title: string; platform: string; tags?: string[]; isNew?: boolean };
 export default function GameCard({ title, platform, tags, isNew }: Props) {
   return (
-    <div className="card">
+    <div className="card hover:shadow-glow transition">
       <div className="flex items-center justify-between">
         <div className="font-semibold">{title}</div>
         {isNew && <span className="text-xs px-2 py-1 rounded bg-accent text-black">NEW</span>}
