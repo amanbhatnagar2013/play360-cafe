@@ -1,8 +1,8 @@
 import Link from "next/link";
-import games from "@/data/games.json";
-import GameCard from "@/components/GameCard";
-import AutoSlider from "@/components/AutoSlider";
-import GameMarquee from "@/components/GameMarquee";
+import games from "../../data/games.json";
+import GameCard from "../../components/GameCard";
+import AutoSlider from "../../components/AutoSlider";
+import GameMarquee from "../../components/GameMarquee";
 
 const slides = [
   { src: "/games/slide1.png", title: "FIFA 23 — Multiplayer Nights", tag: "PS5" },
@@ -16,7 +16,7 @@ const slides = [
 const strip = slides.map(s => ({ src: s.src, title: s.title }));
 
 export default function Home() {
-  const top = games.slice(0, 8);
+  const top = (games as any[]).slice(0, 8);
   return (
     <div className="container py-8 space-y-10">
       <section className="space-y-4">
@@ -35,7 +35,7 @@ export default function Home() {
       <section>
         <h2 className="text-2xl font-semibold mb-4">Popular Titles</h2>
         <div className="grid md:grid-cols-3 lg:grid-cols-4 gap-4">
-          {top.map((g,i) => <GameCard key={i} {...g} />)}
+          {top.map((g,i) => <GameCard key={i} {...(g as any)} />)}
         </div>
       </section>
 
