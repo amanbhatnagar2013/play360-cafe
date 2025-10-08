@@ -1,4 +1,3 @@
-
 import Link from "next/link";
 import games from "../../data/games.json";
 import GameCard from "../../components/GameCard";
@@ -6,7 +5,7 @@ import AutoSlider from "../../components/AutoSlider";
 import GameMarquee from "../../components/GameMarquee";
 import dynamic from "next/dynamic";
 
-const CafeMap = dynamic(() => import("../../components/CafeMap"), { ssr: false });
+const CafeMap = dynamic(() => import("../../components/CafeMapLeaflet"), { ssr: false });
 
 const slides = [
   { src: "/games/slide1.png", title: "FIFA 23 — Multiplayer Nights", tag: "PS5" },
@@ -20,9 +19,13 @@ const slides = [
 const strip = slides.map(s => ({ src: s.src, title: s.title }));
 
 export default function Home() {
-  const top = (games as any[]).slice(0, 8);
+  const list = games as any[];
+  const top = list.slice(0, 8);
+  const newArrivals = list.filter((g:any) => g.isNew).slice(0, 6);
+
   return (
     <div className="container py-8 space-y-10">
+      {/* Hero */}
       <section className="space-y-4">
         <AutoSlider slides={slides} />
         <div className="flex gap-4 justify-center mt-4">
@@ -31,11 +34,54 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Trending strip */}
       <section className="space-y-3">
         <h2 className="text-2xl font-semibold">Trending Now</h2>
         <GameMarquee items={strip} />
       </section>
 
+      {/* New Arrivals */}
+      <section>
+        <div className="flex items-center justify-between mb-3">
+          <h2 className="text-2xl font-semibold">New Arrivals</h2>
+          <Link href="/platforms/playstation" className="text-sm opacity-80 hover:opacity-100">See all</Link>
+        </div>
+        <div className="grid md:grid-cols-3 lg:grid-cols-4 gap-4">
+          {newArrivals.map((g:any, i:number) => <GameCard key={i} {...g} />)}
+        </div>
+      </section>
+
+      {/* Quick Book CTA */}
+      <section className="card grid md:grid-cols-3 gap-4 items-center">
+        <div className="md:col-span-2">
+          <h3 className="text-xl font-semibold mb-1">Quick Book — Seat/Console</h3>
+          <p className="opacity-80 text-sm">Call/WhatsApp to check availability and reserve instantly. Online booking with payment is coming soon.</p>
+        </div>
+        <div className="flex gap-3">
+          <Link href="/booking" className="btn">Book Now</Link>
+          <a href="https://wa.me/918588961662?text=Hi%20Play%20360%20—%20I%20want%20to%20book%20a%20seat" target="_blank" className="btn">WhatsApp</a>
+        </div>
+      </section>
+
+      {/* Store Highlights */}
+      <section>
+        <h2 className="text-2xl font-semibold mb-3">Store Highlights</h2>
+        <div className="grid md:grid-cols-3 gap-4">
+          {[
+            {title: 'Play 360 Tee', price: 599},
+            {title: 'Pro Gamer Cap', price: 499},
+            {title: 'Speed Mousepad XL', price: 699}
+          ].map((p, i) => (
+            <div key={i} className="card">
+              <div className="font-semibold">{p.title}</div>
+              <div className="opacity-70 text-sm">Merch — Coming Soon</div>
+              <div className="mt-2">₹{p.price}</div>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* Popular Titles */}
       <section>
         <h2 className="text-2xl font-semibold mb-4">Popular Titles</h2>
         <div className="grid md:grid-cols-3 lg:grid-cols-4 gap-4">
@@ -43,6 +89,7 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Visit & Map */}
       <section className="card">
         <h3 className="text-xl font-semibold mb-2">Visit Play 360</h3>
         <p>32-A, Shakti Khand 2, Ground Floor, Indirapuram, Ghaziabad • Open 12:30 PM – 9:15 PM</p>
