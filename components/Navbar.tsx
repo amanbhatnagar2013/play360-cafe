@@ -2,9 +2,10 @@
 import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
+import type { Route } from "next";
 import ThemeToggle from "./ThemeToggle";
 
-const NavLink = ({ href, children }: { href: string; children: React.ReactNode }) => {
+const NavLink = ({ href, children }: { href: Route; children: React.ReactNode }) => {
   const path = usePathname();
   const active = path === href;
   return (
