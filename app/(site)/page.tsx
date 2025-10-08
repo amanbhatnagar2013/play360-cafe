@@ -1,8 +1,12 @@
+
 import Link from "next/link";
 import games from "../../data/games.json";
 import GameCard from "../../components/GameCard";
 import AutoSlider from "../../components/AutoSlider";
 import GameMarquee from "../../components/GameMarquee";
+import dynamic from "next/dynamic";
+
+const CafeMap = dynamic(() => import("../../components/CafeMap"), { ssr: false });
 
 const slides = [
   { src: "/games/slide1.png", title: "FIFA 23 — Multiplayer Nights", tag: "PS5" },
@@ -47,12 +51,7 @@ export default function Home() {
 
       <section className="card">
         <h3 className="text-xl font-semibold mb-2">Find Us on Map</h3>
-        <div className="aspect-video w-full rounded-xl overflow-hidden border border-[#222]">
-          <iframe
-            src={"https://www.google.com/maps?q=" + encodeURIComponent("32-A, Shakti Khand 2, Ground Floor, Indirapuram, Ghaziabad") + "&output=embed"}
-            width="100%" height="100%" style={{ border: 0 }} loading="lazy"
-            referrerPolicy="no-referrer-when-downgrade" />
-        </div>
+        <CafeMap lat={28.6385} lng={77.3610} logoUrl="/logo.png" />
       </section>
     </div>
   );
