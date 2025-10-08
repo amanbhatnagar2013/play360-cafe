@@ -1,4 +1,4 @@
-import pricing from "@/data/pricing.json";
+import pricing from "../../../data/pricing.json";
 
 export default function BookingPage() {
   return (
