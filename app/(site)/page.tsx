@@ -12,7 +12,6 @@ const slides = [
   { src: "/games/slide7.png", title: "Rocket League — 2v2/3v3", tag: "PC" },
   { src: "/games/slide10.png", title: "EA FC 24 — Weekend Tournaments", tag: "PS5" },
 ];
-
 const strip = slides.map(s => ({ src: s.src, title: s.title }));
 
 export default function Home() {
@@ -26,19 +25,16 @@ export default function Home() {
           <Link href="/platforms/playstation" className="btn">Browse Games</Link>
         </div>
       </section>
-
       <section className="space-y-3">
         <h2 className="text-2xl font-semibold">Trending Now</h2>
         <GameMarquee items={strip} />
       </section>
-
       <section>
         <h2 className="text-2xl font-semibold mb-4">Popular Titles</h2>
         <div className="grid md:grid-cols-3 lg:grid-cols-4 gap-4">
           {top.map((g,i) => <GameCard key={i} {...(g as any)} />)}
         </div>
       </section>
-
       <section className="card">
         <h3 className="text-xl font-semibold mb-2">Visit Play 360</h3>
         <p>32-A, Shakti Khand 2, Ground Floor, Indirapuram, Ghaziabad • Open 12:30 PM – 9:15 PM</p>

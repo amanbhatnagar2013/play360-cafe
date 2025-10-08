@@ -1,5 +1,4 @@
-import menu from "../../data/menu.json";
-
+import menu from "../../../data/menu.json";
 export default function MenuPage() {
   return (
     <div className="container py-10">

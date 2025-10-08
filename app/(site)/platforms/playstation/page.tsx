@@ -1,5 +1,5 @@
-import games from "../../../data/games.json";
-import GameCard from "../../../components/GameCard";
+import games from "../../../../data/games.json";
+import GameCard from "../../../../components/GameCard";
 export default function Page() {
   const list = (games as any[]).filter((g:any) => (g.platform as string).toLowerCase().includes("ps"));
   return (
