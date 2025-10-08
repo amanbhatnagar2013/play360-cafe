@@ -1,4 +1,5 @@
-import pricing from "@/data/pricing.json";
+import pricing from "../../data/pricing.json";
+
 export default function BookingPage() {
   return (
     <div className="container py-10 space-y-6">
@@ -6,11 +7,11 @@ export default function BookingPage() {
       <div className="card">
         <div className="font-semibold mb-2">Pricing</div>
         <ul className="grid md:grid-cols-2 gap-2 text-sm">
-          <li>PC: ₹{pricing.PC_per_hour}/hour</li>
-          <li>PS4: ₹{pricing.PS4_per_controller_per_hour}/hour per controller</li>
-          <li>PS5: ₹{pricing.PS5_per_controller_per_hour}/hour per controller</li>
-          <li>Xbox: ₹{pricing.Xbox_per_controller_per_hour}/hour per controller</li>
-          <li>Racing Wheel: ₹{pricing.Racing_wheel_simulator_per_hour}/hour</li>
+          <li>PC: ₹{(pricing as any).PC_per_hour}/hour</li>
+          <li>PS4: ₹{(pricing as any).PS4_per_controller_per_hour}/hour per controller</li>
+          <li>PS5: ₹{(pricing as any).PS5_per_controller_per_hour}/hour per controller</li>
+          <li>Xbox: ₹{(pricing as any).Xbox_per_controller_per_hour}/hour per controller</li>
+          <li>Racing Wheel: ₹{(pricing as any).Racing_wheel_simulator_per_hour}/hour</li>
         </ul>
       </div>
       <div className="card">
