@@ -1,0 +1,32 @@
+[
+  {
+    "item": "Fries",
+    "price": 79,
+    "veg": true
+  },
+  {
+    "item": "Veg Burger",
+    "price": 129,
+    "veg": true
+  },
+  {
+    "item": "Chicken Burger",
+    "price": 159,
+    "veg": false
+  },
+  {
+    "item": "Cold Coffee",
+    "price": 99,
+    "veg": true
+  },
+  {
+    "item": "Energy Drink",
+    "price": 149,
+    "veg": true
+  },
+  {
+    "item": "Margherita Pizza",
+    "price": 249,
+    "veg": true
+  }
+]

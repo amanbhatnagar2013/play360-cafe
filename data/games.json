@@ -1,0 +1,153 @@
+[
+  {
+    "title": "FIFA 23",
+    "platform": "PlayStation 5",
+    "tags": [
+      "Sports",
+      "Multiplayer"
+    ],
+    "isNew": true
+  },
+  {
+    "title": "Call of Duty: Modern Warfare II",
+    "platform": "PlayStation 5",
+    "tags": [
+      "Shooter",
+      "Online"
+    ]
+  },
+  {
+    "title": "GTA V",
+    "platform": "PlayStation 4",
+    "tags": [
+      "Action",
+      "Open World"
+    ]
+  },
+  {
+    "title": "Gran Turismo 7",
+    "platform": "PS5 (Racing Wheel)",
+    "tags": [
+      "Racing"
+    ],
+    "isNew": true
+  },
+  {
+    "title": "Forza Horizon 5",
+    "platform": "Xbox Series X",
+    "tags": [
+      "Racing"
+    ]
+  },
+  {
+    "title": "Halo Infinite",
+    "platform": "Xbox Series X",
+    "tags": [
+      "Shooter"
+    ]
+  },
+  {
+    "title": "Rocket League",
+    "platform": "PC",
+    "tags": [
+      "Sports",
+      "Online"
+    ]
+  },
+  {
+    "title": "Valorant",
+    "platform": "PC",
+    "tags": [
+      "Competitive",
+      "Shooter"
+    ]
+  },
+  {
+    "title": "Counter\u2011Strike 2",
+    "platform": "PC",
+    "tags": [
+      "Shooter"
+    ]
+  },
+  {
+    "title": "EA FC 24",
+    "platform": "PS5",
+    "tags": [
+      "Sports",
+      "Multiplayer"
+    ],
+    "isNew": true
+  },
+  {
+    "title": "Mortal Kombat 11",
+    "platform": "PS4",
+    "tags": [
+      "Fighting"
+    ]
+  },
+  {
+    "title": "Tekken 8",
+    "platform": "PS5",
+    "tags": [
+      "Fighting"
+    ],
+    "isNew": true
+  },
+  {
+    "title": "NBA 2K24",
+    "platform": "PS5",
+    "tags": [
+      "Sports"
+    ]
+  },
+  {
+    "title": "Need for Speed Unbound",
+    "platform": "PS5",
+    "tags": [
+      "Racing"
+    ]
+  },
+  {
+    "title": "PUBG: Battlegrounds",
+    "platform": "PC",
+    "tags": [
+      "Battle Royale"
+    ]
+  },
+  {
+    "title": "Apex Legends",
+    "platform": "PC",
+    "tags": [
+      "Battle Royale"
+    ]
+  },
+  {
+    "title": "Minecraft",
+    "platform": "Xbox",
+    "tags": [
+      "Creative"
+    ]
+  },
+  {
+    "title": "It Takes Two",
+    "platform": "PS5",
+    "tags": [
+      "Co\u2011op"
+    ]
+  },
+  {
+    "title": "Spider\u2011Man 2",
+    "platform": "PS5",
+    "tags": [
+      "Action"
+    ],
+    "isNew": true
+  },
+  {
+    "title": "God of War Ragnarok",
+    "platform": "PS5",
+    "tags": [
+      "Action"
+    ]
+  }
+]
